@@ -1,0 +1,276 @@
+.jb-textarea
+  position relative
+  display inline-block
+  width 100%
+  vertical-align bottom
+  font-size 14px
+  .jb-input__count
+    color #909399
+    background #fff
+    position absolute
+    font-size 12px
+    bottom 5px
+    right 10px
+  &.is-disabled
+    .jb-textarea__inner
+      background-color #f5f7fa
+      border-color #e4e7ed
+      color #c0c4cc
+      cursor not-allowed
+      &::-webkit-input-placeholder
+        color #c0c4cc
+      &:-ms-input-placeholder
+        color #c0c4cc
+      &::-ms-input-placeholder
+        color #c0c4cc
+      &::placeholder
+        color #c0c4cc
+  &.is-exceed
+    .jb-textarea__inner
+      border-color #f56c6c
+    .jb-input__count
+      color #f56c6c
+.jb-textarea__inner
+  display block
+  resize vertical
+  padding 5px 15px
+  line-height 1.5
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  width 100%
+  font-size inherit
+  color #606266
+  background-color #fff
+  background-image none
+  border 1px solid #dcdfe6
+  border-radius 4px
+  transition border-color .2s cubic-bezier(.645,.045,.355,1)
+  &::-webkit-input-placeholder
+    color #c0c4cc
+  &:-ms-input-placeholder
+    color #c0c4cc
+  &::-ms-input-placeholder
+    color #c0c4cc
+  &::placeholder
+    color #c0c4cc
+  &:hover
+    border-color #c0c4cc
+  &:focus
+    outline 0
+    border-color #409eff
+.jb-input
+  position relative
+  font-size 14px
+  display inline-block
+  width 100%
+  &::-webkit-scrollbar
+    z-index 11
+    width 6px
+    &:horizontal
+      height 6px
+  &::-webkit-scrollbar-thumb
+    border-radius 5px
+    width 6px
+    background #b4bccc
+  &::-webkit-scrollbar-corner
+    background #fff
+  &::-webkit-scrollbar-track
+    background #fff
+  &::-webkit-scrollbar-track-piece
+    background #fff
+    width 6px
+  .jb-input__clear
+    color #c0c4cc
+    font-size 14px
+    cursor pointer
+    -webkit-transition color .2s cubic-bezier(.645,.045,.355,1)
+    transition color .2s cubic-bezier(.645,.045,.355,1)
+    &:hover
+      color #909399
+  .jb-input__count
+    height 100%
+    display -webkit-inline-box
+    display -ms-inline-flexbox
+    display inline-flex
+    -webkit-box-align center
+    -ms-flex-align center
+    align-items center
+    color #909399
+    font-size 12px
+    .jb-input__count-inner
+      background #fff
+      line-height initial
+      display inline-block
+      padding 0 5px
+  &.is-disabled
+    .jb-input__inner
+      background-color #f5f7fa
+      border-color #e4e7ed
+      color #c0c4cc
+      cursor not-allowed
+      &::-webkit-input-placeholder
+        color #c0c4cc
+      &:-ms-input-placeholder
+        color #c0c4cc
+      &::-ms-input-placeholder
+        color #c0c4cc
+      &::placeholder
+        color #c0c4cc
+    .jb-input__icon
+      cursor not-allowed
+  &.is-exceed
+    .jb-input__inner
+      border-color #f56c6c
+    .jb-input__suffix
+      .jb-input__count
+        color #f56c6c
+.jb-input__inner
+  -webkit-appearance none
+  background-color #fff
+  background-image none
+  border-radius 4px
+  border 1px solid #dcdfe6
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  color #606266
+  display inline-block
+  font-size inherit
+  height 40px
+  line-height 40px
+  outline 0
+  padding 0 15px
+  transition border-color .2s cubic-bezier(.645,.045,.355,1)
+  width 100%
+  &::-webkit-input-placeholder
+    color #c0c4cc
+  &:-ms-input-placeholder
+    color #c0c4cc
+  &::-ms-input-placeholder
+    color #c0c4cc
+  &::placeholder
+    color #c0c4cc
+  &:hover
+    border-color #c0c4cc
+  &::-ms-clear
+    display none
+    width 0
+    height 0
+.jb-input__prefix,
+.jb-input__suffix
+  position absolute
+  top 0
+  -webkit-transition all .3s
+  text-align center
+  height 100%
+  color #c0c4cc
+.jb-input.is-active .jb-input__inner,.jb-input__inner:focus
+  border-color #409eff
+  outline 0
+.jb-input__suffix
+  right 5px
+  transition all .3s
+  pointer-events none
+.jb-input__suffix-inner
+  pointer-events all
+.jb-input__prefix
+  left 5px
+  transition all .3s
+.jb-input__icon
+  height 100%
+  width 25px
+  text-align center
+  transition all .3s
+  line-height 40px
+  &:after
+    content ''
+    height 100%
+    width 0
+    display inline-block
+    vertical-align middle
+.jb-input__validateIcon
+  pointer-events none
+.jb-input--suffix
+  .jb-input__inner
+    padding-right 30px
+.jb-input--prefix
+  .jb-input__inner
+    padding-left 30px
+.jb-input--medium
+  font-size 14px
+  .jb-input__inner
+    height 36px
+    line-height 36px
+  .jb-input__icon
+    line-height 36px
+.jb-input--small
+  font-size 13px
+  .jb-input__inner
+    height 32px
+    line-height 32px
+  .jb-input__icon
+    line-height 32px
+.jb-input--mini
+  font-size 12px
+  .jb-input__inner
+    height 28px
+    line-height 28px
+  .jb-input__icon
+    line-height 28px
+.jb-input-group
+  line-height normal
+  display inline-table
+  width 100%
+  border-collapse separate
+  border-spacing 0
+  & > .jb-input__inner
+    vertical-align middle
+    display table-cell
+.jb-input-group__append,
+.jb-input-group__prepend
+  background-color #f5f7fb
+  color #909399
+  vertical-align middle
+  display table-cell
+  position relative
+  border 1px solid #dcdfe6
+  border-radius 4px
+  padding 0 20px
+  width 1px
+  white-space nowrap
+.jb-input-group--prepend .jb-input__inner
+,.jb-input-group__append
+  border-top-left-radius 0
+  border-bottom-left-radius 0
+.jb-input-group--append .jb-input__inner
+,.jb-input-group__prepend
+  border-top-right-radius 0
+  border-bottom-right-radius 0
+.jb-input-group__append:focus,.jb-input-group__prepend:focus
+  outline 0
+.jb-input-group__append .jb-button,
+.jb-input-group__append .jb-select,
+.jb-input-group__prepend .jb-button,
+.jb-input-group__prepend .jb-select
+  display inline-block
+  margin -10px -20px
+.jb-input-group__append button.jb-button,
+.jb-input-group__append div.jb-select .jb-input__inner,
+.jb-input-group__append div.jb-select:hover .jb-input__inner,
+.jb-input-group__prepend button.jb-button,
+.jb-input-group__prepend div.jb-select .jb-input__inner,
+.jb-input-group__prepend div.jb-select:hover .jb-input__inner
+  border-color transparent
+  background-color transparent
+  color inherit
+  border-top 0
+  border-bottom 0
+.jb-input-group__append .jb-button,.jb-input-group__append .jb-input,
+.jb-input-group__prepend .jb-button,.jb-input-group__prepend .jb-input
+  font-size inherit
+.jb-input-group__prepend
+  border-right 0
+.jb-input-group__append
+  border-left 0
+.jb-input-group--append .jb-select .jb-input.is-focus .jb-input__inner,
+.jb-input-group--prepend .jb-select .jb-input.is-focus .jb-input__inner
+  border-color transparent

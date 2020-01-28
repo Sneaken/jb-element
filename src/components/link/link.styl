@@ -1,0 +1,89 @@
+.jb-link
+  display inline-flex
+  -webkit-box-orient horizontal
+  -webkit-box-direction normal
+  -ms-flex-direction row
+  flex-direction row
+  -webkit-box-align center
+  -ms-flex-align center
+  align-items center
+  -webkit-box-pack center
+  -ms-flex-pack center
+  justify-content center
+  vertical-align middle
+  position relative
+  text-decoration none
+  outline 0
+  cursor pointer
+  padding 0
+  font-size 14px
+  font-weight 500
+  &.is-underline:hover:after
+    content ""
+    position absolute
+    left 0
+    right 0
+    height 0
+    bottom 0
+    border-bottom 1px solid #409eff
+  &.is-disabled
+    cursor not-allowed
+  & [class*="el-icon-"] + span
+    margin-left 5px
+  &.jb-link--default:after,
+  &.jb-link--primary.is-underline:hover:after,
+  &.jb-link--primary:after
+    border-color #409eff
+  &.jb-link--default
+    color #606266
+  &.jb-link--default:hover
+    color #409eff
+  &.jb-link--default.is-disabled
+    color #c0c4cc
+
+  &.jb-link--primary
+    color #409eff
+  &.jb-link--primary:hover
+    color #66b1ff
+  &.jb-link--primary.is-disabled
+    color #a0cfff
+
+  &.jb-link--danger.is-underline:hover:after,
+  &.jb-link--danger:after
+    border-color #f56c6c
+  &.jb-link--danger
+    color #f56c6c
+  &.jb-link--danger:hover
+    color #f78989
+  &.jb-link--danger.is-disabled
+    color #fab6b6
+
+  &.jb-link--success.is-underline:hover:after,
+  &.jb-link--success:after
+    border-color #67c23a
+  &.jb-link--success
+    color #67c23a
+  &.jb-link--success:hover
+    color #85ce61
+  &.jb-link--success.is-disabled
+    color #b3e19d
+
+  &.jb-link--warning.is-underline:hover:after,
+  &.jb-link--warning:after
+    border-color #e6a23c
+  &.jb-link--warning
+    color #e6a23c
+  &.jb-link--warning:hover
+    color #ebb563
+  &.jb-link--warning.is-disabled
+    color #f3d19e
+
+  &.jb-link--info.is-underline:hover:after,
+  &.jb-link--info:after
+    border-color #909399
+  &.jb-link--info
+    color #909399
+  &.jb-link--info:hover
+    color #a6a9ad
+  &.jb-link--info.is-disabled
+    color #c8c9cc
