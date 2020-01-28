@@ -21,7 +21,7 @@ import { Component, Vue, Prop } from 'vue-property-decorator'
 import { throttle } from 'throttle-debounce'
 @Component
 export default class JbBacktop extends Vue {
-  @Prop({ type: Number, default: 200 }) private visibilityHeight?: number
+  @Prop({ type: Number, default: 200 }) private visibilityHeight!: number
   @Prop({ type: String }) private target!: string
   @Prop({ type: Number, default: 40 }) private right: number = 40
   @Prop({ type: Number, default: 40 }) private bottom: number = 40
@@ -42,7 +42,6 @@ export default class JbBacktop extends Vue {
     this.init()
     this.throttledScrollHandler = throttle(300, this.onScroll)
     this.container!.addEventListener('scroll', this.throttledScrollHandler)
-    console.log(this.throttledScrollHandler)
   }
 
   init() {
@@ -58,8 +57,7 @@ export default class JbBacktop extends Vue {
   }
   onScroll() {
     const scrollTop = this.el!.scrollTop
-    this.visible = scrollTop >= this.visibilityHeight!
-    console.log(this.visible)
+    this.visible = scrollTop >= this.visibilityHeight
   }
   handleClick(e: MouseEvent) {
     this.scrollToTop()
@@ -69,7 +67,6 @@ export default class JbBacktop extends Vue {
     const el = this.el
     let step = 0
     const interval = setInterval(() => {
-      console.log(this.el)
       if (el!.scrollTop <= 0) {
         clearInterval(interval)
         return
